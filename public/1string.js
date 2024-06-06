@@ -55,10 +55,6 @@ console.log(stringWithoutDuplicates); // Output: "joel"
 
 
 
-
-
-
-
 /*------------------------Review question----------------------------*/
 
 

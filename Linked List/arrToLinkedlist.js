@@ -13,34 +13,34 @@ class LinkedList {
         this.size = 0;
     }
 
-   prepend(value){
-    const node = new Node(value)
-    if(!this.head){
-        this.head = node 
-    }else{
-        node.next = this.head 
-        this.head = node 
+    prepend(value) {
+        const node = new Node(value)
+        if (!this.head) {
+            this.head = node
+        } else {
+            node.next = this.head
+            this.head = node
+        }
+        this.size++
     }
-    this.size++
-   }
 
-   append(value){
+    append(value) {
 
-       const node = new Node(value)
-       if(!this.head ){
-           this.head = node 
-        }else{
-            let curr = this.head 
-            
-            while(curr.next){
-                curr= curr.next
+        const node = new Node(value)
+        if (!this.head) {
+            this.head = node
+        } else {
+            let curr = this.head
+
+            while (curr.next) {
+                curr = curr.next
             }
 
-       curr.next = node 
-       this.size++
-   }
-       
-}
+            curr.next = node
+            this.size++
+        }
+
+    }
     print() {
         let current = this.head;
         let output = "";
@@ -58,7 +58,7 @@ const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 // for (let i = arr.length - 1; i >= 0; i--) {
 //     linkedList.prepend(arr[i]);
 // }
-for( i=0;i<=arr.length-1 ;i++){
+for (i = 0; i <= arr.length - 1; i++) {
     list.append(arr[i])
 }
 

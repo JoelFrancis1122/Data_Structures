@@ -94,6 +94,24 @@ class DoublyLinkedList {
     return value;
   }
 
+  reverse() {
+    let curr = this.head;
+    let prev = null;
+    
+    while (curr) {
+        // Swap the next and prev pointers
+        let next = curr.next;
+        curr.next = prev;
+        curr.prev = next;
+        // Move prev and curr one step forward
+        prev = curr;
+        curr = next;
+    }
+    
+    // Swap head and tail
+    this.tail = this.head;
+    this.head = prev;
+}
 
 
   print() {
@@ -136,5 +154,6 @@ list.printReverse();
 list.removeFromEnd();
 list.print();
 list.removeFromFront();
+list.reverse()
 list.print();
-list.removeFromBack()
+// list.removeFromBack()
